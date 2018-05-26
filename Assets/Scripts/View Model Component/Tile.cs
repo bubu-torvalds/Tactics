@@ -14,6 +14,11 @@ public class Tile : MonoBehaviour {
         }
     }
 
+    public GameObject content;
+
+    [HideInInspector] public Tile prev;
+    [HideInInspector] public int distance;
+
     void Match() {
         transform.localPosition = new Vector3(pos.x, height * stepHeight / 2f, pos.y);
         transform.localScale = new Vector3(1, height * stepHeight, 1);
